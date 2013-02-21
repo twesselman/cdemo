@@ -1,0 +1,58 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script>
+
+function createCookie() {
+var address = document.forms['cookieform'].address.value;
+var fulladdress = document.forms['cookieform'].fulladdress.value;
+var username = document.forms['cookieform'].username.value;
+var password = document.forms['cookieform'].password.value;
+var domain = document.forms['cookieform'].domain.value;
+document.cookie = "EAN_autostart=true; expires=0; path=/";
+document.cookie = "EAN_address="+address+"; expires=0; path=/";
+document.cookie = "EAN_full_address="+fulladdress+"; expires=0; path=/";
+document.cookie = "EAN_username="+username+"; expires=0; path=/";
+document.cookie = "EAN_password="+password+"; expires=0; path=/";
+document.cookie = "EAN_domain="+domain+"; expires=0; path=/";
+}
+
+function testCookie() {
+document.cookie = "EAN_autostart=true; expires=0; path=/";
+document.cookie = "EAN_address=Rdpdemo.ericom.com; expires=0; path=/";
+document.cookie = "EAN_full_address=Rdpdemo.ericom.com; expires=0; path=/";
+document.cookie = "EAN_username=demo; expires=0; path=/";
+document.cookie = "EAN_password=demo; expires=0; path=/";
+//document.cookie = "EAN_domain=; expires=0; path=/";
+}
+
+function readCookie(name) {
+var nameEQ = name + "=";
+var ca = document.cookie.split(';');
+for(var i=0;i < ca.length;i++) {
+var c = ca[i];
+while (c.charAt(0)==' ') c = c.substring(1,c.length);
+if (c.indexOf(nameEQ) == 0) {
+alert( c.substring(nameEQ.length,c.length));
+}
+}
+}
+
+</script>
+
+</head>
+<body>
+
+
+
+<form method="POST" action="/login">
+  Username: <input type="text" name="username" size="15" /><br />
+  Password: <input type="password" name="passwort" size="15" /><br />
+  <p><input type="submit" value="Login" /></p>
+</form>
+
+
+</body>
+</html>
