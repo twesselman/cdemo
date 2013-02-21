@@ -1,6 +1,6 @@
 var express = require ('express');
 var server = express();
-
+  
 var ericomServer='http://10.81.108.10:8080/AccessNow/start.html';
 
 server.configure(function() {
@@ -22,7 +22,7 @@ server.get('/read', function(req, res) {
    if(req.session.username)
    {
        res.send(req.session.username);
-   }
+   } 
    else
    {
        res.send('no data');
