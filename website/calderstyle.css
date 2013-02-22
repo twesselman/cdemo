@@ -28,6 +28,15 @@ body {
 
 }
 
+.appicon {
+	width: 100px;
+	text-decoration: none;
+}
+
+.appref {
+	text-decoration: none;
+}
+
 #files {
 	float: right;
 }
