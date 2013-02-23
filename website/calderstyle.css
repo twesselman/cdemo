@@ -12,11 +12,10 @@ body {
 }
 
 #middle {
-	margin: 20px auto;
+	margin: 2px;
 	float: left;
-	height: 300x;
-	width: 600px;
 	background: #B8B8B8;
+	width: 550px;
 
 	display: inline-block;
 	-webkit-border-radius: 10px;
@@ -34,7 +33,25 @@ body {
 }
 
 .appref {
+    margin: 20px auto;
 	text-decoration: none;
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+	-moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+	box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+}
+
+.apptext {
+    background: #ebebeb;
+    font: verdana;
+}
+
+
+.appref:hover {
+    position: relative;
+	top: -4px;
 }
 
 #files {
