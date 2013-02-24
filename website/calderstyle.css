@@ -7,11 +7,33 @@ body {
 	color: #666;
 }
 
-#mainmenu {
-	height: 120px;
+#login {
+    position: absolute;
+    top: 180px;
+    left: 400px;
+    background: #B8B8B8;
+    opacity: 1;
+    z-index: 100;
+    border:3px solid blue
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+	-moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+	box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
 }
 
-#middle {
+#loginform {
+    margin: 50px;
+}
+
+#mainmenu {
+	height: 120px;
+    opacity:0.2;
+    }
+
+#appbar {
+    opacity:0.2;
 	margin: 0px;
 	float: left;
 	background: #B8B8B8;
@@ -24,7 +46,6 @@ body {
 	-webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
 	-moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
 	box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
-
 }
 
 .appbutton {
@@ -60,6 +81,7 @@ body {
 
 #files {
 	float: right;
+    display: none;
 }
 
 
@@ -208,3 +230,8 @@ html[xmlns] #nav {
 * html #nav {
 	height: 1%;
 }
+
+
+	
+		
+
