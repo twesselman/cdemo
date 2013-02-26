@@ -156,3 +156,4 @@
 {"ts":1361741415078,"patch":[[{"diffs":[[0,".xls</a>"],[-1,"\n\t"],[0,"\t\t\t\t</li"]],"start1":2168,"start2":2168,"length1":18,"length2":16}]],"length":5947,"saved":false}
 {"ts":1361741416888,"patch":[[{"diffs":[[0,".xls</a>"],[-1,"\t\t\t\t"],[0,"</li>\n\t\t"]],"start1":2168,"start2":2168,"length1":20,"length2":16}]],"length":5943,"saved":false}
 {"ts":1361741428881,"patch":[[{"diffs":[[0,"=\"\">"],[-1,"Sub-Level Item"],[1,"Arch spec.doc"],[0,"</a>"]],"start1":2198,"start2":2198,"length1":22,"length2":21}]],"length":5942,"saved":false}
+{"ts":1361752330668,"patch":[[{"diffs":[[0,"res</a></li>"],[1," "],[0,"\n\t\t</ul>\n\t</"]],"start1":2304,"start2":2304,"length1":24,"length2":25}]],"length":5943,"saved":false}

@@ -10,28 +10,7 @@
 </head>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-
-<script> 
-
-$(document).ready(function() {
-//    $('#appbar').style.visibility = visible;
-    $('#login').css('opacity', 1.0);
-    
-    $('#loginnow').click(function(event) {
-        event.preventDefault();
-        $('#mainmenu').css('opacity', 1.0 );
-        $('#appbar').css('opacity', 1.0 );
-        $('#login').hide();
-    });
- });
-
-
-
- function launchpopup(url) {
-    newwindow=window.open(url, "popup", "status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=0,scrollbars=0,height=800,width=1024");
-}
-
-</script>
+<script src="calder.js"></script>
 
 <body>
 
@@ -69,7 +48,7 @@ $(document).ready(function() {
 	<li><a href="" onclick="launchpopup('/launch/desktop')">Desktop</a></li>
 	<li><a href="">Applications</a>
 		<ul>
-			<li><a href="" onclick="launchpopup('/launch/mspaint')">Paint</a></li>
+			<li><a href="" class="exec_mspaint">Paint</a></li>
 			<li><a href="">Aptana</a></li>
 			<li><a href="">System Tools</a>
 				<ul>
@@ -103,49 +82,12 @@ $(document).ready(function() {
 </div>
 
 
-<section id="appbar">
 
-    <button title="Outlook" class="appbutton">
-        <img class="appimg" src="outlook.png"/>
-        <br><span class="apptext" >Outlook</span>
-    </button>
-        
-    <button title="Word" class="appbutton" onclick="launchpopup('/launch/msword')">
-        <img class="appimg" src="word.png"/>
-        <br><span class="apptext" >Word</span>
-        </button>
-        
-    <button title="Excel" class="appbutton" onclick="launchpopup('/launch/excel')">
-        <img class="appimg" src="excel.png"/>
-        <br><span class="apptext" >Excel</span>
-    </button>
-        
-    <button title="Powerpoint" class="appbutton" onclick="launchpopup('/launch/msppt')">
-        <img class="appimg" src="powerpoint.png"/>
-        <br><span class="apptext" >Powerpoint</span>
-    </button>
+<br><br>
 
-    <button title="Microsoft Paint" class="appbutton" onclick="launchpopup('/launch/mspaint')">
-        <img class="appimg" src="mspaint.png"/>
-        <br><span class="apptext" >Paint</span>
-    </button>
-    
-    <button title="Aptana" class="appbutton" onclick="launchpopup('/launch/aptana')">
-        <img class="appimg" src="aptana.png"/>
-        <br><span class="apptext" >Aptana</span>
-    </button>
-    
-    <button title="Autocad" class="appbutton">
-        <img class="appimg" src="autocad.png"/>
-        <br><span class="apptext" >Autocad</span>
-    </button>
-           
-    <button title="ERP" class="appbutton">
-        <img class="appimg" src="erp.png"/>
-        <br><span class="apptext" >SAP ERP</span>
-    </button>
-        
-        
+<section id="apptablesection">
+    <table id="apptable">
+    </table>    
 </section>
 
 <section id="files">
@@ -186,6 +128,51 @@ $(document).ready(function() {
             </ul>
         </div>
     </div>
+</section>
+
+<section id="appbar">
+
+    <button title="Outlook" class="appbutton">
+        <img class="appimg" src="outlook.png"/>
+        <br><span class="apptext" >Outlook</span>
+    </button>
+        
+    <button title="Word" class="appbutton" onclick="launchpopup('/launch/msword')">
+        <img class="appimg" src="word.png"/>
+        <br><span class="apptext" >Word</span>
+        </button>
+        
+    <button title="Excel" class="appbutton" onclick="launchpopup('/launch/excel')">
+        <img class="appimg" src="excel.png"/>
+        <br><span class="apptext" >Excel</span>
+    </button>
+        
+    <button title="Powerpoint" class="appbutton" onclick="launchpopup('/launch/msppt')">
+        <img class="appimg" src="powerpoint.png"/>
+        <br><span class="apptext" >Powerpoint</span>
+    </button>
+
+    <button title="Microsoft Paint" class="appbutton exec_mspaint">
+        <img class="appimg" src="mspaint.png"/>
+        <br><span class="apptext" >Paint</span>
+    </button>
+    
+    <button title="Aptana" class="appbutton" onclick="launchpopup('/launch/aptana')">
+        <img class="appimg" src="aptana.png"/>
+        <br><span class="apptext" >Aptana</span>
+    </button>
+    
+    <button title="Autocad" class="appbutton">
+        <img class="appimg" src="autocad.png"/>
+        <br><span class="apptext" >Autocad</span>
+    </button>
+           
+    <button title="ERP" class="appbutton">
+        <img class="appimg" src="erp.png"/>
+        <br><span class="apptext" >SAP ERP</span>
+    </button>
+        
+        
 </section>
 
 
