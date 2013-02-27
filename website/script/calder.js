@@ -3,46 +3,47 @@ $(document).ready(function() {
     });
 
 function readApps() {
-    var xmlHttp = null;
-	var sUrl = "/myapps";
-    xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", sUrl, false );
-    xmlHttp.send( null );
+    'use strict';
+    var sUrl = "/myapps";
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", sUrl, false);
+    xmlHttp.send(null);
     var myapps=xmlHttp.responseText;
     console.log(myapps);
     var arrayApps = JSON.parse(myapps).apps;
-     
-    var htmlTable = [];
-    var iTable = 0;
-        
-    var htmlMenu = [];
-    var iMenu = 0;
-    
+
+    var htmlMenu = [], iMenu = 0,
+        htmlTable = [], iTable = 0,
+        index = 0;
+
     htmlTable[iTable++] = '<tr>';
-    for (var index in arrayApps) {
+    for (index in arrayApps) {
+        // add table element
         htmlTable[iTable++] = '<td>';  
         htmlTable[iTable++] = '<button class="appbutton" title="' + arrayApps[index].name + '" ';
         htmlTable[iTable++] = 'onclick="launchpopup(\'' + arrayApps[index].exe + '\')">';
-        htmlTable[iTable++] = '<img class="appimg" src="' + arrayApps[index].imagefile + '"/>';        
-        htmlTable[iTable++] = '<br><span class="apptext" >' + arrayApps[index].name + '</span>';        
+        htmlTable[iTable++] = '<img class="appimg" src="' + arrayApps[index].imagefile + '"/>';
+        htmlTable[iTable++] = '<br><span class="apptext" >' + arrayApps[index].name + '</span>';
         htmlTable[iTable++] = '</button>';
-        htmlTable[iTable++] = '</td>';   
+        htmlTable[iTable++] = '</td>';
         
+        // add a row after every 4'th element
         if (((parseInt(index)+1)%4) === 0) {
-            htmlTable[++iTable] = '</tr>';
+            htmlTable[iTable++] = '</tr>';
             htmlTable[iTable++] = '<tr>';
         }
         
+        // add menu item
         htmlMenu[iMenu++] = '<li><a href="" ';
         htmlMenu[iMenu++] = 'onclick="launchpopup(\'' + arrayApps[index].exe + '\')">';
-        htmlMenu[iMenu++] = '<img class="menuappimg" src="' + arrayApps[index].imagefile + '"/>'; 
+        htmlMenu[iMenu++] = '<img class="menuappimg" src="' + arrayApps[index].imagefile + '"/>';
         htmlMenu[iMenu++] = arrayApps[index].name + '</a></li>';
     }
-    htmlTable[++iTable] = '</tr>';
+    htmlTable[iTable++] = '</tr>';
     
-    $('#apptable').html(htmlTable.join(''));     
-    $('#appmenu').html(htmlMenu.join(''));     
- };
+    $('#apptable').html(htmlTable.join(''));  
+    $('#appmenu').html(htmlMenu.join(''));
+}
 
 
 function launchpopup(url) {
