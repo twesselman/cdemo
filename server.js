@@ -1,24 +1,28 @@
 var express = require ('express');
-var server = express();
-  
-var ericomServer='http://10.81.108.10:8080/AccessNow/start.html';
+var app = express();
 
-server.configure(function() {
-    server.use(express.bodyParser());
-    server.use(express.cookieParser());
-    server.use(express.session({secret: 'my super secret'}));
+app.use(express.cookieParser());
+app.use(express.cookieSession({ secret: 'Calder Demo Secret', cookie: { maxAge: 60 * 60 * 1000 }}));
+ 
+var ericomapp='http://10.81.108.10:8080/AccessNow/start.html';
+
+app.configure(function() {
+    app.use(express.bodyParser());
+    app.use(express.cookieParser());
+    app.use(express.session({secret: 'my super secret'}));
     });
 
-server.use(express.static(__dirname + '/website'));
-server.use(express.static(__dirname + '/scripts'));
+app.use(express.static(__dirname + '/website'));
+app.use(express.static(__dirname + '/website/script'));
+app.use(express.static(__dirname + '/website/content'));
 
-server.post('/set', function (req, res) {
+app.post('/set', function (req, res) {
     console.log('test called');
     req.session.username = req.body.name;
     res.send('set ok');
 });
 
-server.get('/read', function(req, res) {
+app.get('/read', function(req, res) {
    if(req.session.username)
    {
        res.send(req.session.username);
@@ -29,14 +33,34 @@ server.get('/read', function(req, res) {
    }  
 });
 
-server.post('/login', function(req, res) {
-    console.log('login');
-    // do login stuff
+var myApps = {"apps": [
+        {"name": "Outlook", "imagefile": "outlook.png", "exe": "/launch/outlook"},        
+        {"name": "Word", "imagefile": "word.png", "exe": "/launch/word"},        
+        {"name": "Excel", "imagefile": "excel.png", "exe": "/launch/excel"},        
+        {"name": "Powerpoint", "imagefile": "powerpoint.png", "exe": "/launch/msppt"},        
+        {"name": "Paint", "imagefile": "mspaint.png", "exe": "/launch/mspaint"},        
+        {"name": "Aptana", "imagefile": "aptana.png", "exe": "/launch/aptana"},
+        {"name": "Autocad", "imagefile": "autocad.png", "exe": "#"},
+        {"name": "SAP ERP", "imagefile": "erp.png", "exe": "#"}
+    ]
+};
 
+app.get('/myapps', function(req, res) {
+    console.log('get myapps');
+    console.log(myApps);
+    res.send(JSON.stringify(myApps));
+});
+
+app.post('/login', function(req, res) {
+    console.log('login: '+req.body.username + ' password: ' + req.body.password);
+    
+    // do login stuff
+    req.session.login = req.body.username;
+    
     res.redirect('/calder.html');
 });
 
-server.get('/launch/:app', function(req, res) {
+app.get('/launch/:app', function(req, res) {
     console.log('launch called');
     console.log('Cookies: '+req.cookies);
     console.log('App: '+req.params.app);
@@ -67,13 +91,13 @@ server.get('/launch/:app', function(req, res) {
         res.cookie('EAN_alternate_shell', appPath);
     }
 
-    res.redirect(ericomServer);
+    res.redirect(ericomapp);
 });
 
 
 // listen
 var port = process.env.PORT || 3000;
-server.listen(port, function () {
+app.listen(port, function () {
 	console.log('Calder Demo - listening on '+port);
 });
 
