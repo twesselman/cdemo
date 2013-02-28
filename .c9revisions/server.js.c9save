@@ -76,3 +76,5 @@
 {"ts":1361934253325,"patch":[[{"diffs":[[0,"+ '/website/"],[-1,"scrip"],[1,"conten"],[0,"t'));\n\napp.p"]],"start1":562,"start2":562,"length1":29,"length2":30}]],"length":2995,"saved":false}
 {"ts":1361934349548,"patch":[[{"diffs":[[0,"t('/"],[-1,"index"],[1,"cal"],[0,".htm"]],"start1":1938,"start2":1938,"length1":13,"length2":11}]],"length":2993,"saved":false}
 {"ts":1361934350879,"patch":[[{"diffs":[[0,"ct('/cal"],[1,"der"],[0,".html');"]],"start1":1937,"start2":1937,"length1":16,"length2":19}]],"length":2996,"saved":false}
+{"contributors":[],"silentsave":true,"ts":1362090853764,"patch":[[{"diffs":[[0,"', '"],[-1,"administrator"],[1,"Tom"],[0,"');\n"]],"start1":2153,"start2":2153,"length1":21,"length2":11}]],"length":2986,"saved":false}
+{"ts":1362090853824,"patch":[[{"diffs":[[0,"word', '"],[-1,"c"],[1,"C"],[0,"isco123!"]],"start1":2188,"start2":2188,"length1":17,"length2":17}]],"length":2986,"saved":false}

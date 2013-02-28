@@ -65,8 +65,8 @@ app.get('/launch/:app', function(req, res) {
     console.log('Cookies: '+req.cookies);
     console.log('App: '+req.params.app);
 
-    res.cookie('EAN_username', 'administrator');
-    res.cookie('EAN_password', 'cisco123!');
+    res.cookie('EAN_username', 'Tom');
+    res.cookie('EAN_password', 'Cisco123!');
     res.cookie('EAN_autostart', 'true');
     res.cookie('EAN_remoteapplicationmode', 'true');
 
