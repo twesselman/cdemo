@@ -72,23 +72,21 @@ app.get('/launch/:app', function(req, res) {
 
     var appPath;
     switch (req.params.app) {
-        case 'aptana': {
-            appPath = '"C:\\Users\\Administrator\\AppData\\Local\\Aptana Studio 3\\AptanaStudio3.exe"';
-            break;
-        };
-	case 'desktop': {
-	    res.cookie('EAN_remoteapplicationmode', 'false');
-            console.log('Launching: desktop');
-	    break;
-	}
-	default: {
-	    appPath = req.params.app;
-	};
-    };
+    case 'aptana': 
+        appPath = '"C:\\Users\\Administrator\\AppData\\Local\\Aptana Studio 3\\AptanaStudio3.exe"';
+        break;
+    case 'desktop': 
+        res.cookie('EAN_remoteapplicationmode', 'false');
+        console.log('Launching: desktop');
+        break;
+    default: 
+        appPath = req.params.app;
+    
+    }
 
     if (appPath) {
-	console.log('Launching: ' + appPath);
         res.cookie('EAN_alternate_shell', appPath);
+	    console.log('Launching: ' + appPath);
     }
 
     res.redirect(ericomapp);
