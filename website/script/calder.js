@@ -1,6 +1,21 @@
 $(document).ready(function() {
+    $('#addappbutton').click(launchAppStore);
     readApps();
     });
+
+function launchpopup(url, x, y, width, height ) {
+    x = x || 20;
+    y = y || 20;
+    width = width || 1024;
+    height = height || 768
+
+    newwindow=window.open(url, 'popup', 'left=' + x + ', top=' + y + ', height=' + height + ',width=' + width + ', status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=0,scrollbars=0');
+}
+
+
+function launchAppStore() {
+    launchpopup('/appstore.html', 400,200, 600,400);
+}
 
 function readApps() {
     'use strict';
@@ -45,8 +60,3 @@ function readApps() {
     $('#appmenu').html(htmlMenu.join(''));
 }
 
-
-function launchpopup(url) {
-    alert(url);
- //   newwindow=window.open(url, "popup", "status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=0,scrollbars=0,height=800,width=1024");
-}

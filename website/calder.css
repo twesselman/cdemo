@@ -10,7 +10,35 @@ body {
 /* app table **********************************************************************/
 
 #apptableheader {
-    float: right;
+    width: 522px;
+    height: 40px;
+    background: #B8B8B8;
+    border: 1px solid #aaaaaa;
+    margin-bottom: 8px;
+}
+
+/* round corners with inset */
+#apptableheader, #apptablesection {
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+	-moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+	box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+}
+
+.appbutton {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+	-moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+	box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
+}
+
+#addappbutton {
+   float: right;    
+   margin-right: 10px;
 }
 
 #apptablesection {
@@ -18,14 +46,6 @@ body {
 	float: left;
 	background: #B8B8B8;
 	width: 522px;
-
-	display: inline-block;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
-	-moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
-	box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
 }
 
 .apptable {
@@ -35,14 +55,7 @@ body {
 .appbutton {
     margin: 5px;
     text-decoration: none;
-    -webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
-	-moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
-	box-shadow: inset 0 1px 5px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .9), 0 -1px 0 rgba(0, 0, 0, .6);
 }
-
 
 .appbutton:hover {
     position: relative;
@@ -69,6 +82,7 @@ body {
 
 #mainmenu {
     height: 120px;
+    margin-bottom: 80px; /* add space for the menus to drop down */
     }
 
 .menuappimg {
@@ -79,9 +93,6 @@ body {
     width: 20px;
 }
 
-a {
-    color: #333;
-}
 #nav {
 	margin: 0;
 	padding: 7px 6px 0;
@@ -110,7 +121,7 @@ a {
 }
 /* main level link */
 #nav a {
-	font-weight: bold;
+    font-weight: bold;
 	color: #e7e5e5;
 	text-decoration: none;
 	display: block;
@@ -120,6 +131,7 @@ a {
 	-moz-border-radius: 1.6em;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
 }
+
 /* main level link hover */
 #nav .current a, #nav li:hover > a {
 	background: #d1d1d1; /* for non-css3 browsers */
@@ -225,5 +237,72 @@ html[xmlns] #nav {
 	height: 1%;
 }
 
+/*  General button format  */
 
+.nicebutton {
+    font-weight: bold;
+    text-shadow: 0 1px 0 white;
+    text-decoration: none;
+    color: black;
+    background-color: #F2F2F2;
+    padding: 9px 20px;
+    
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    
+    background-image: -webkit-linear-gradient(90deg, #DBDBDB, #F2F2F2);
+    background-image: -moz-linear-gradient(90deg, #DBDBDB, #F2F2F2);
+    background-image: -ms-linear-gradient(90deg, #DBDBDB, #F2F2F2);
+    background-image: -o-linear-gradient(90deg, #DBDBDB, #F2F2F2);
+    background-image: linear-gradient(90deg, #DBDBDB, #F2F2F2);
+    
+    border: 1px solid #B3B3B3;
+    
+    -webkit-box-shadow: inset 0 0 2px 1px white, 0 2px 5px rgba(0,0,0,0.15), inset 0 -17px 0 rgba(0,0,0,0.06);
+    -moz-box-shadow: inset 0 0 2px 1px white, 0 2px 5px rgba(0,0,0,0.15), inset 0 -17px 0 rgba(0,0,0,0.06);
+    box-shadow: inset 0 0 2px 1px white, 0 2px 5px rgba(0,0,0,0.15), inset 0 -17px 0 rgba(0,0,0,0.06);
+}
+.nicebutton .pushed {
+    position: relative;
+}
+.nicebutton:hover {
+    background-image: -webkit-linear-gradient(90deg, #E8E8E8, #F7F7F7);
+    background-image: -moz-linear-gradient(90deg, #E8E8E8, #F7F7F7);
+    background-image: -ms-linear-gradient(90deg, #E8E8E8, #F7F7F7);
+    background-image: -o-linear-gradient(90deg, #E8E8E8, #F7F7F7);
+    background-image: linear-gradient(90deg, #E8E8E8, #F7F7F7);
+}
+.nicebutton.pushed:active {
+    top: 2px;    
+}
+.nicebutton:active {
+    -webkit-box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.1), inset 0 -17px 0 rgba(0,0,0,0.06);
+    -moz-box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.1), inset 0 -17px 0 rgba(0,0,0,0.06);
+    box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.1), inset 0 -17px 0 rgba(0,0,0,0.06);
+}
+
+/* Modal appstore */
+
+.modal {
+    background-color:#fff;
+    display:none;
+    width:350px;
+    padding:15px;
+    text-align:left;
+    border:2px solid #333;
+    
+    opacity:0.8;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    -moz-box-shadow: 0 0 50px #ccc;
+    -webkit-box-shadow: 0 0 50px #ccc;
+}
+
+.modal h2 {
+    margin:0px;
+    padding:10px 0 10px 45px;
+    border-bottom:1px solid #333;
+    font-size:20px;
+}
 
