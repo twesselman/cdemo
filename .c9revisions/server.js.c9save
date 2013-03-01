@@ -242,3 +242,4 @@
 {"ts":1362160558493,"patch":[[{"diffs":[[0,"mspaint\n"],[1,"//"],[0,"http://1"]],"start1":3354,"start2":3354,"length1":16,"length2":18}]],"length":3724,"saved":false}
 {"ts":1362160563311,"patch":[[{"diffs":[[0,"paint\n//"],[1," "],[0,"http://1"]],"start1":3356,"start2":3356,"length1":16,"length2":17}]],"length":3725,"saved":false}
 {"ts":1362160573909,"patch":[[{"diffs":[[0,"h;\n\n"],[-1,"// http://10.81.108.10:8080/AccessNow/start.html?autostart=true&remoteapplicationmode=true&username=Tom&password=Cisco123!&alternate_shell=mspaint\n"],[0,"// h"]],"start1":3211,"start2":3211,"length1":155,"length2":8}]],"length":3578,"saved":false}
+{"ts":1362160843311,"patch":[[{"diffs":[[0," || "],[-1,"300"],[1,"8"],[0,"0;\na"]],"start1":3482,"start2":3482,"length1":11,"length2":9}]],"length":3576,"saved":false}
