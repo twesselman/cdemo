@@ -4,28 +4,33 @@ var app = express();
 app.use(express.cookieParser());
 app.use(express.cookieSession({ secret: 'Calder Demo Secret', cookie: { maxAge: 60 * 60 * 1000 }}));
  
-var ericomapp='http://10.81.108.10:8080/AccessNow/start.html';
+var ericomurl='http://10.81.108.10:8080/AccessNow/start.html';
 
 app.configure(function() {
     app.use(express.bodyParser());
-//    app.use(express.cookieParser());
-//    app.use(express.session({secret: 'my super secret'}));
+    app.use(express.cookieParser());
+    app.use(express.session({secret: 'my super secret'}));
+    app.use(express.static(__dirname + '/website'));
+    app.use(express.static(__dirname + '/website/script'));
+    app.use(express.static(__dirname + '/website/content'));
     });
 
-app.use(express.static(__dirname + '/website'));
-app.use(express.static(__dirname + '/website/script'));
-app.use(express.static(__dirname + '/website/content'));
 
 app.post('/set', function (req, res) {
-    console.log('test called');
+    console.log('set called');
     req.session.username = req.body.name;
-    res.send('set ok');
+    res.cookie('mycookie', req.body.name);
+    res.send('session.username set to ' + req.body.name);
 });
 
 app.get('/read', function(req, res) {
    if(req.session.username)
    {
-       res.send(req.session.username);
+       var result = 'session.username: ' + req.session.username + '<br>';
+       result += 'cookie: ' + req.cookies.mycookie +'<br>';
+       
+       result += req.cookies;
+       res.send(result);
    } 
    else
    {
@@ -61,9 +66,9 @@ app.post('/login', function(req, res) {
 });
 
 app.get('/launch/:app', function(req, res) {
-    console.log('launch called');
-    console.log('Cookies: '+req.cookies);
-    console.log('App: '+req.params.app);
+    console.log('launch called: App: '+req.params.app);
+    
+    // set cookies (works only if Ericom is on the same server
 
     res.cookie('EAN_username', 'Tom');
     res.cookie('EAN_password', 'Cisco123!');
@@ -86,10 +91,18 @@ app.get('/launch/:app', function(req, res) {
 
     if (appPath) {
         res.cookie('EAN_alternate_shell', appPath);
-	    console.log('Launching: ' + appPath);
-    }
+        console.log('Launching: ' + appPath);
+    } 
+    
+    var url = ericomurl;
+    url +='?autostart=true&remoteapplicationmode=true&username=Tom&password=Cisco123!&alternate_shell=';
+    url +=appPath;
 
-    res.redirect(ericomapp);
+// http://10.81.108.10:8080/AccessNow/start.html?autostart=true&remoteapplicationmode=true&username=Tom&password=Cisco123!&alternate_shell=mspaint
+    console.log(url);
+    res.redirect(url);
+
+//    res.redirect(ericomurl);
 });
 
 
