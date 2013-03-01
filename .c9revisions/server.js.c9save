@@ -125,3 +125,5 @@
 {"ts":1362091300571,"patch":[[{"diffs":[[0,"ms.app) "],[1,"{"],[0,"\n    cas"]],"start1":2341,"start2":2341,"length1":16,"length2":17}]],"length":2968,"saved":false}
 {"ts":1362091317442,"patch":[[{"diffs":[[0,"appPath) {\n\t"],[1,"    "],[0,"console.log("]],"start1":2691,"start2":2691,"length1":24,"length2":28}]],"length":2972,"saved":false}
 {"ts":1362091323402,"patch":[[{"diffs":[[0,") {\n"],[-1,"\t    console.log('Launching: ' + appPath);\n        res.cookie('EAN_alternate_shell',"],[1,"        res.cookie('EAN_alternate_shell', appPath);\n\t    console.log('Launching: ' +"],[0," app"]],"start1":2698,"start2":2698,"length1":92,"length2":92}]],"length":2972,"saved":false}
+{"ts":1362098175443,"patch":[[{"diffs":[[0,".bodyParser());\n"],[1,"//"],[0,"    app.use(expr"]],"start1":303,"start2":303,"length1":32,"length2":34}]],"length":2974,"saved":false}
+{"ts":1362098179113,"patch":[[{"diffs":[[0,"eParser());\n"],[1,"//"],[0,"    app.use("]],"start1":346,"start2":346,"length1":24,"length2":26}]],"length":2976,"saved":false}

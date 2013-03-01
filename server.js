@@ -8,8 +8,8 @@ var ericomapp='http://10.81.108.10:8080/AccessNow/start.html';
 
 app.configure(function() {
     app.use(express.bodyParser());
-    app.use(express.cookieParser());
-    app.use(express.session({secret: 'my super secret'}));
+//    app.use(express.cookieParser());
+//    app.use(express.session({secret: 'my super secret'}));
     });
 
 app.use(express.static(__dirname + '/website'));
