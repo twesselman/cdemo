@@ -49,15 +49,26 @@ app.get('/workspace', function(req, res) {
     res.redirect('/calder.html');
 });
 
-var myAppsBackup = {"apps": [
-        {"name": "Paint (local)", "imagefile": "mspaint.png", "exe": "/launch/mspaint"}    
+var myAppsLocal = {"apps": [
+        {"name": "Outlook", "imagefile": "outlook.png", "exe": "/launch/outlook"},        
+        {"name": "Word", "imagefile": "word.png", "exe": "/launch/word"},        
+        {"name": "Excel", "imagefile": "excel.png", "exe": "/launch/excel"},        
+        {"name": "Powerpoint", "imagefile": "powerpoint.png", "exe": "/launch/powerpoint"},        
+        {"name": "Paint", "imagefile": "mspaint.png", "exe": "http://10.81.108.14:3000/launch/mspaint"},        
+        {"name": "Aptana", "imagefile": "aptana.png", "exe": "10.81.108.14:3000/launch/aptana"},
+        {"name": "Autocad", "imagefile": "autocad.png", "exe": "#"},
+        {"name": "SAP ERP", "imagefile": "erp.png", "exe": "#"}
     ]
 };
     
 app.get('/myapps', function(req, res) {
     console.log('/myapps');
 
-    if (req.session.csmanager) {
+    if (process.argv[2] == 'c9') {
+        res.send(JSON.stringify(myAppsLocal));   
+    }
+    else {
+//if (req.session.csmanager == undefined) {
         var options = {
           host: req.session.csmanager,
           path: '/myapps?id='+req.session.csuserid,  
@@ -84,10 +95,6 @@ app.get('/myapps', function(req, res) {
         console.log('getting apps from: '+options.host + '  path:' + options.path);
         
         http.request(options, callback).end();    
-    }
-    else
-    {
-        res.send(JSON.stringify(myAppsBackup));
     }
 });
 

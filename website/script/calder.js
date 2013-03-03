@@ -35,7 +35,7 @@ function readApps() {
     for (index in arrayApps) {
         // add table element
         htmlTable[iTable++] = '<td>';  
-        htmlTable[iTable++] = '<button class="appbutton" title="' + arrayApps[index].name + '" ';
+        htmlTable[iTable++] = '<button class="appbutton" title="' + arrayApps[index].exe + '" ';
         htmlTable[iTable++] = 'onclick="launchpopup(\'' + arrayApps[index].exe + '\')">';
         htmlTable[iTable++] = '<img class="appimg" src="' + arrayApps[index].imagefile + '"/>';
         htmlTable[iTable++] = '<br><span class="apptext" >' + arrayApps[index].name + '</span>';
