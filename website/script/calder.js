@@ -60,3 +60,4 @@ function readApps() {
     $('#appmenu').html(htmlMenu.join(''));
 }
 
+
