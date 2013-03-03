@@ -527,3 +527,7 @@
 {"ts":1362342081192,"patch":[[{"diffs":[[0,"    {\n  "],[1,"      console.log('')"],[0,"\n    }\n "]],"start1":2685,"start2":2685,"length1":16,"length2":37}]],"length":4241,"saved":false}
 {"ts":1362342082998,"patch":[[{"diffs":[[0,"le.log('"],[1,"oops"],[0,"')\n    }"]],"start1":2704,"start2":2704,"length1":16,"length2":20}]],"length":4245,"saved":false}
 {"ts":1362342085002,"patch":[[{"diffs":[[0,"('oops')"],[1,";"],[0,"\n    }\n "]],"start1":2710,"start2":2710,"length1":16,"length2":17}]],"length":4246,"saved":false}
+{"ts":1362342398758,"patch":[[{"diffs":[[0,"suserid,"],[1,"  /// **********************fix"],[0,"\n       "]],"start1":1810,"start2":1810,"length1":16,"length2":47}]],"length":4277,"saved":false}
+{"ts":1362342400134,"patch":[[{"diffs":[[0,"*****fix"],[1,"up"],[0,"\n       "]],"start1":1841,"start2":1841,"length1":16,"length2":18}]],"length":4279,"saved":false}
+{"ts":1362342401598,"patch":[[{"diffs":[[0,"rid,  //"],[-1,"/"],[0," *******"]],"start1":1814,"start2":1814,"length1":17,"length2":16}]],"length":4278,"saved":false}
+{"ts":1362342406063,"patch":[[{"diffs":[[0,"apps"],[-1,"?id='+req.session.csuserid"],[0,",  /"]],"start1":1787,"start2":1787,"length1":34,"length2":8}]],"length":4252,"saved":false}
