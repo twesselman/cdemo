@@ -41,7 +41,7 @@ app.get('/read', function(req, res) {
 
 app.get('/workspace', function(req, res) {
     console.log('/workspace')
-    console.log('id: '+req.query.id);
+    console.log('id: '+req.query.csuserid);
     console.log('manager:'+req.query.csmanager);
     req.session.csuserid = req.query.csuserid;
     req.session.csmanager = req.query.csmanager;
@@ -66,16 +66,30 @@ var myApps = {"apps": [
     ]
 };
 
-app.get('/myapps', function(req, res) {
-    console.log('get myapps');
+app.get('/myapps2', function(req, res) {
+    console.log('/myapps2 - local');
+    res.send(JSON.stringify(myApps));
+    });
+
     
+app.get('/myapps', function(req, res) {
+    console.log('/myapps');
+
+    
+// *********************change to use real host - req.session.csmanager,
+//path: '/myapps?id='+req.session.csuserid,
+//          host: 'http://10.81.108.14',
+
     if (req.session.csmanager) {
         var options = {
-          host: req.session.csmanager,
-          path: '/myapps?id='+req.session.userid
+          host: '10.81.108.14',
+          path: '/myapps',
+          port: 3000,
+          method: 'GET'
         };
-        
+
         var callback = function(response) {
+            console.log('callback');
           var str = '';
         
           //another chunk of data has been recieved, so append it to `str`
@@ -90,7 +104,7 @@ app.get('/myapps', function(req, res) {
           });
         };
         
-        console.log('getting apps from: '+options);
+        console.log('getting apps from: '+options.host + '  path:' + options.path);
         
         http.request(options, callback).end();    
     }

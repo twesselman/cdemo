@@ -24,6 +24,7 @@ function readApps() {
     xmlHttp.open("GET", sUrl, false);
     xmlHttp.send(null);
     var myapps=xmlHttp.responseText;
+if (null) {
     console.log(myapps);
     var arrayApps = JSON.parse(myapps).apps;
 
@@ -58,6 +59,7 @@ function readApps() {
     
     $('#apptable').html(htmlTable.join(''));  
     $('#appmenu').html(htmlMenu.join(''));
+}
 }
 
 
