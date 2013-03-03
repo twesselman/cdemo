@@ -56,8 +56,7 @@ var myAppsLocal = {"apps": [
         {"name": "Powerpoint", "imagefile": "powerpoint.png", "exe": "/launch/powerpoint"},        
         {"name": "Paint", "imagefile": "mspaint.png", "exe": "http://10.81.108.14:3000/launch/mspaint"},        
         {"name": "Aptana", "imagefile": "aptana.png", "exe": "10.81.108.14:3000/launch/aptana"},
-        {"name": "Autocad", "imagefile": "autocad.png", "exe": "#"},
-        {"name": "SAP ERP", "imagefile": "erp.png", "exe": "#"}
+
     ]
 };
     
