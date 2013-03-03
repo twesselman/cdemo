@@ -531,3 +531,4 @@
 {"ts":1362342400134,"patch":[[{"diffs":[[0,"*****fix"],[1,"up"],[0,"\n       "]],"start1":1841,"start2":1841,"length1":16,"length2":18}]],"length":4279,"saved":false}
 {"ts":1362342401598,"patch":[[{"diffs":[[0,"rid,  //"],[-1,"/"],[0," *******"]],"start1":1814,"start2":1814,"length1":17,"length2":16}]],"length":4278,"saved":false}
 {"ts":1362342406063,"patch":[[{"diffs":[[0,"apps"],[-1,"?id='+req.session.csuserid"],[0,",  /"]],"start1":1787,"start2":1787,"length1":34,"length2":8}]],"length":4252,"saved":false}
+{"ts":1362342462855,"patch":[[{"diffs":[[0,"'/myapps"],[1,"'"],[0,",  // **"]],"start1":1783,"start2":1783,"length1":16,"length2":17}]],"length":4253,"saved":false}

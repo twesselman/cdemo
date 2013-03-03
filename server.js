@@ -60,7 +60,7 @@ app.get('/myapps', function(req, res) {
     if (req.session.csmanager) {
         var options = {
           host: req.session.csmanager,
-          path: '/myapps,  // **********************fixup
+          path: '/myapps',  // **********************fixup
           port: 3000,
           method: 'GET'
         };
