@@ -5,6 +5,8 @@ var http = require ('http');
 app.use(express.cookieParser());
 app.use(express.cookieSession({ secret: 'Calder Demo Secret', cookie: { maxAge: 60 * 60 * 1000 }}));
 
+var ericomurl='http://10.81.108.10:8080/AccessNow/start.html';
+
 app.configure(function() {
     app.use(express.bodyParser());
     app.use(express.cookieParser());
@@ -49,25 +51,26 @@ app.get('/workspace', function(req, res) {
     res.redirect('/calder.html');
 });
 
+
+// ************************************* copy of CSM apps - used within c9 for prototyping
 var myAppsLocal = {"apps": [
         {"name": "Outlook", "imagefile": "outlook.png", "exe": "/launch/outlook"},        
         {"name": "Word", "imagefile": "word.png", "exe": "/launch/word"},        
         {"name": "Excel", "imagefile": "excel.png", "exe": "/launch/excel"},        
         {"name": "Powerpoint", "imagefile": "powerpoint.png", "exe": "/launch/powerpoint"},        
         {"name": "Paint", "imagefile": "mspaint.png", "exe": "http://10.81.108.14:3000/launch/mspaint"},        
-        {"name": "Aptana", "imagefile": "aptana.png", "exe": "10.81.108.14:3000/launch/aptana"},
-
+        {"name": "Aptana", "imagefile": "aptana.png", "exe": "http://10.81.108.14:3000/launch/aptana"}
     ]
 };
     
 app.get('/myapps', function(req, res) {
     console.log('/myapps');
 
+// was (could be) if (req.session.csmanager == undefined) {
     if (process.argv[2] == 'c9') {
         res.send(JSON.stringify(myAppsLocal));   
     }
     else {
-//if (req.session.csmanager == undefined) {
         var options = {
           host: req.session.csmanager,
           path: '/myapps?id='+req.session.csuserid,  

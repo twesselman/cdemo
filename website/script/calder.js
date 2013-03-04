@@ -12,7 +12,6 @@ function launchpopup(url, x, y, width, height ) {
     newwindow=window.open(url, 'popup', 'left=' + x + ', top=' + y + ', height=' + height + ',width=' + width + ', status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=0,scrollbars=0');
 }
 
-
 function launchAppStore() {
     launchpopup('/appstore.html', 400,200, 600,400);
 }

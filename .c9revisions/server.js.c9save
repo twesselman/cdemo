@@ -568,3 +568,11 @@
 {"ts":1362343541301,"patch":[[{"diffs":[[0,"AppsLoca"],[1,"l"],[0," = {\"app"]],"start1":1472,"start2":1472,"length1":16,"length2":17}]],"length":4894,"saved":false}
 {"ts":1362343544701,"patch":[[{"diffs":[[0,"Apps"],[-1,"Backup"],[1,"Local"],[0,")); "]],"start1":2341,"start2":2341,"length1":14,"length2":13}]],"length":4893,"saved":false}
 {"ts":1362343675402,"patch":[[{"diffs":[[0,"t.png\", \"exe\": \""],[1,"http://"],[0,"10.81.108.14:300"]],"start1":1899,"start2":1899,"length1":32,"length2":39}]],"length":4900,"saved":false}
+{"ts":1362344658874,"patch":[[{"diffs":[[0,"na\"}"],[-1,",\n        {\"name\": \"Autocad\", \"imagefile\": \"autocad.png\", \"exe\": \"#\"},\n        {\"name\": \"SAP ERP\", \"imagefile\": \"erp.png\", \"exe\": \"#\"}"],[0,"\n   "]],"start1":2057,"start2":2057,"length1":142,"length2":8}]],"length":4766,"saved":false}
+{"ts":1362346786117,"patch":[[{"diffs":[[0,"\"exe\": \""],[1,"http://"],[0,"10.81.10"]],"start1":2020,"start2":2020,"length1":16,"length2":23}]],"length":4773,"saved":false}
+{"ts":1362346788512,"patch":[[{"diffs":[[0,");\n});\n\n"],[1,"\n// \n"],[0,"var myAp"]],"start1":1458,"start2":1458,"length1":16,"length2":21}]],"length":4778,"saved":false}
+{"ts":1362346789552,"patch":[[{"diffs":[[0,");\n\n\n// "],[1,"******"],[0,"\nvar myA"]],"start1":1462,"start2":1462,"length1":16,"length2":22}]],"length":4784,"saved":false}
+{"ts":1362346797706,"patch":[[{"diffs":[[0,"/ ******"],[1,"******************************* copy of CSM apps - used with"],[0,"\nvar myA"]],"start1":1468,"start2":1468,"length1":16,"length2":76}]],"length":4844,"saved":false}
+{"ts":1362346798608,"patch":[[{"diffs":[[0,"sed with"],[1,"in C"],[0,"\nvar myA"]],"start1":1528,"start2":1528,"length1":16,"length2":20}]],"length":4848,"saved":false}
+{"ts":1362346800798,"patch":[[{"diffs":[[0," within "],[-1,"C"],[1,"c9 for proto"],[0,"\nvar myA"]],"start1":1531,"start2":1531,"length1":17,"length2":28}]],"length":4859,"saved":false}
+{"ts":1362346802820,"patch":[[{"diffs":[[0,"or proto"],[1,"typing"],[0,"\nvar myA"]],"start1":1543,"start2":1543,"length1":16,"length2":22}]],"length":4865,"saved":false}
